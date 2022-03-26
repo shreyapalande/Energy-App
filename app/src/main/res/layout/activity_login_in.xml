@@ -23,16 +23,17 @@
         android:id="@+id/editTextEmail"
         android:layout_width="275dp"
         android:layout_height="55dp"
-        android:layout_marginTop="120dp"
-        android:ems="10"
-        android:hint="Email"
-        android:inputType="textPersonName"
+        android:layout_marginTop="104dp"
         android:background="@drawable/rounded_edit_text"
         android:drawableLeft="@drawable/ic_baseline_email_24"
         android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textPersonName"
         android:padding="15dp"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/app_logo" />
 
@@ -66,22 +67,38 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
 
     <TextView
-        android:id="@+id/txt_forgot_password"
-        android:layout_width="154dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="36dp"
-        android:text="Forgot your Password?   "
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
-
-    <TextView
         android:id="@+id/text_sign_up"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="42dp"
-        android:text="Don't have an account? Click here"
+        android:textSize="16dp"
+        android:text="Don't have an account?"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+    <TextView
+        android:id="@+id/forgot_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="108dp"
+        android:text=""
+        android:textSize="16dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPassword"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+
+    <TextView
+        android:id="@+id/click_here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:textSize="16dp"
+        android:text=" Click here"
+        android:clickable="true"
+        app:layout_constraintStart_toEndOf="@+id/text_sign_up"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

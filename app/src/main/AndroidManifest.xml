@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TestMe">
         <activity
+            android:name=".relative_layout"
+            android:exported="false" />
+        <activity
+            android:name=".custom_view"
+            android:exported="false" />
+        <activity
+            android:name=".home"
+            android:exported="false" />
+        <activity
+            android:name=".LinedListAdapter"
+            android:exported="false" />
+        <activity
             android:name=".UserDetails"
             android:exported="false" />
         <activity
