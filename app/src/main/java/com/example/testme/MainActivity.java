@@ -41,6 +41,14 @@ public class MainActivity extends AppCompatActivity {
                 openRecyclerView();
             }
         });
+
+        Button add_app = (Button) findViewById(R.id.button2);
+        add_app.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openAddApp();
+            }
+        });
     }
 
     public void openLogin() {
@@ -60,6 +68,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void openRecyclerView() {
         Intent intent = new Intent(this,relative_layout.class);
+        startActivity(intent);
+    }
+
+    public void openAddApp() {
+        Intent intent = new Intent(this,add_app.class);
         startActivity(intent);
     }
 }

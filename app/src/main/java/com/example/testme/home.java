@@ -22,7 +22,6 @@ import java.util.ArrayList;
 public class home extends AppCompatActivity {
 
     PieChart pieChart;
-
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -39,9 +38,8 @@ public class home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        pieChart = findViewById(R.id.piechart);
 
-        setData();
+//        setData();
         initList();
 
         Spinner spinner = findViewById(R.id.spinner_spinner);
@@ -56,14 +54,19 @@ public class home extends AppCompatActivity {
                 Toast.makeText(home.this,clicked+" selected",Toast.LENGTH_SHORT).show();
 
                 ArrayList<ExampleItem> examplelist = new ArrayList<>();
+                pieChart = findViewById(R.id.piechart);
                 String arr[] = {"Okayy","Byee","Welcome"};
                 for(int j=0 ; j< arr.length ; j++)
                 {
                     if(arr[j].equals(clicked))
                     {
+                        for(int k=0 ; k< arr1.length ; k++)
+                            pieChart.addPieSlice(new PieModel(arr2[k],arr1[k],arr3[k]));
                         examplelist.add(new ExampleItem(Integer.toString(arr1[j]),arr2[j]));
                     }
                 }
+
+                pieChart.startAnimation();
 
                 mRecyclerView = findViewById(R.id.homeView);
                 mRecyclerView.setHasFixedSize(true);
@@ -106,17 +109,17 @@ public class home extends AppCompatActivity {
 
     }
 
-    private void setData(){
-        // Set the percentage of language used
-        for(int i=0 ; i<arr1.length ; i++)
-        {
-            pieChart.addPieSlice(new PieModel(arr2[i],arr1[i],arr3[i]));
-        }
-
-        // To animate the pie chart
-        pieChart.startAnimation();
-
-    }
+//    private void setData(){
+//        // Set the percentage of language used
+//        for(int i=0 ; i<arr1.length ; i++)
+//        {
+//            pieChart.addPieSlice(new PieModel(arr2[i],arr1[i],arr3[i]));
+//        }
+//
+//        // To animate the pie chart
+//        pieChart.startAnimation();
+//
+//    }
 
     private void initList()
     {
